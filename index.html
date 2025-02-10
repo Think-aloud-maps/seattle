@@ -214,8 +214,8 @@
             { title: "Current Time", info: "6:09 AM." },
             { title: "Address of Origin", info: "927 11th St, Bremerton, WA 98337." },
             { title: "Address of Destination", info: "17800 Alpental Access Rd, North Bend, WA 98045." },
-            { title: "Distance to Destination", info: "" },
-            { title: "Estimated Time to Destination", info: "" },
+            { title: "Distance to Destination", info: "98.05 miles." },
+            { title: "Estimated Time to Destination", info: "124 minutes." },
             { title: "State of Charge of Battery", info: "52% charge." },
             { title: "Range of Current Battery", info: "156 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "117 miles." },
@@ -233,10 +233,10 @@
                 name: 'Marriott Tacoma Convention Center',
 
                 location: '1552 Commerce St, Tacoma, WA 98402, USA',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '34.8',
+                originTime: '46',
+                destDistance: '65.9',
+                destTime: '86',
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -272,10 +272,10 @@
                 name: 'Sno Falls Credit Union',
 
                 location: 'PO Box 2510, North Bend, WA 98045, USA',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '74.6',
+                originTime: '98',
+                destDistance: '24.35',
+                destTime: '31',
 
                 
                 waitTime: [
@@ -938,8 +938,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
